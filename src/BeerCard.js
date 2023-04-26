@@ -14,5 +14,4 @@ function BeerCard(props) {
             </li></div>
     )
 }
-
 export default BeerCard;
