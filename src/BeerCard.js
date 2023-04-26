@@ -7,24 +7,23 @@ function BeerCard(props) {
     <div className="Beer-Card">
       <li style={{ listStyle: "none" }}>
         <img style={{ height: "200px" }} src={image_url} alt="beerImage"></img>
-        <h3>
-          {name}
-          <span> {first_brewed}</span>
+        <h3>{name}
         </h3>
         <h4>{tagline}</h4>
-        <div className="stats">
-          <ul style={{ listStyle: "none" }}>
-            <li>
-              <b>ABV: {abv}</b>
-            </li>
-            <b>Description: </b>
-            {description}
-          </ul>
-          <button onClick={() => setLike((prevLike) => !prevLike)}>
-            Like:{like ? "❤️" : "🤍"}
-          </button>
-        </div>
+        <h4><span>First Brewed: {first_brewed}</span></h4>
       </li>
+      <div className="stats">
+        <ul style={{ listStyle: "none" }}>
+          <li>
+            <b>ABV: {abv}</b>
+          </li>
+          <b>Description: </b>
+          {description}
+        </ul>
+        <button onClick={() => setLike((prevLike) => !prevLike)}>
+          Like:{like ? "❤️" : "🤍"}
+        </button>
+      </div>
     </div>
   );
 }
